@@ -1,0 +1,69 @@
+
+
+body {
+    background-color: lightseagreen;
+    color: darkblue;
+    font-family: "Times New Roman", serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/*HEADING STYLES*/
+h1 {
+    background-color:darkblue;
+    color: rgb(116, 131, 131);
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+h2 {
+    color: rgb(188, 255, 188);
+    font-size: 16px;
+    font-weight: normal;
+}
+h3 {
+    color: pink;
+    font-size: 14px;
+    line-height:20px;
+}
+h4 {
+    color:limegreen;
+    font-size: 40px;
+}
+h5 {
+    background-color:black;
+    color:salmon;
+    font-size:12px;
+}
+
+
+/*PARAGRAPH STYLES*/
+p {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/*LIST STYLES*/
+ul {
+    color:limegreen;
+    font-size: 18px;
+    line-height: 2;
+    list-style-type: square;
+}
+
+
+/*LINK STYLES*/
+a {
+    color:rgb(77, 6, 144);
+    text-decoration: overline; 
+}
+
+/*NEW CSS STYLES.... (z-index)moving the image to a position behind the text.*/
+img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
