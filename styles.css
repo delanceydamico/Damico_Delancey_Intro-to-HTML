@@ -12,8 +12,8 @@ body {
 /*HEADING STYLES*/
 h1 {
     background-color:darkblue;
-    color: rgb(116, 131, 131);
-    font-size: 20px;
+    color: rgb(116, 131, 131); 
+    font-size: 20px; 
     font-weight: bold;
     text-transform: capitalize;
 }
