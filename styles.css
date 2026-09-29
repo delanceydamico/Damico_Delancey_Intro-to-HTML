@@ -1,69 +1,100 @@
 
-
-body {
-    background-color: lightseagreen;
-    color: darkblue;
-    font-family: "Times New Roman", serif;
-    font-size: 14px;
-    line-height: 1.5;
+/*top*/
+.article10 {
+  background-color:rgb(107, 60, 237);
+  width: 800px;
+  height: 150px;
+  position: fixed;
+  top: 10px;
+  
+}
+/*secondbox*/
+.article2 {
+  background-color:rgb(253, 61, 23);
+  width: 800px;
+  height: 150px;
+  position: fixed;
+  top: 150px;
+}
+/*third box*/
+.article3 {
+  background-color:rgb(203, 246, 123);
+  width: 800px;
+  height: 150px;
+  position: fixed;
+  top: 300px;
+  
+}
+/*4thbox*/
+.article4 { 
+  background-color:rgb(206, 0, 161);
+  width: 800px;
+  height: 150px;
+  position: fixed;
+  top: 450px;
+}
+/*5thbox*/
+.article5 {
+  background-color:rgb(123, 172, 246);
+  width: 800px;
+  height: 150px;
+  position: fixed;
+  top: 600px;
 }
 
 
-/*HEADING STYLES*/
-h1 {
-    background-color:darkblue;
-    color: rgb(116, 131, 131);
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: capitalize;
-}
-h2 {
-    color: rgb(188, 255, 188);
-    font-size: 16px;
-    font-weight: normal;
-}
-h3 {
-    color: pink;
-    font-size: 14px;
-    line-height:20px;
-}
-h4 {
-    color:limegreen;
-    font-size: 40px;
-}
-h5 {
-    background-color:black;
-    color:salmon;
-    font-size:12px;
-}
 
 
-/*PARAGRAPH STYLES*/
-p {
-    font-size: 12px;
-    line-height: 1.5;
+
+/*long verticle stripes*/
+.article8 {
+  background-color: white;
+  width: 20px;
+  height: 750px;
+  position: fixed;
+  top: 10px;
+  left: 50px;
+
+}
+.article9 {
+  background-color: white;
+  width: 20px;
+  height: 750px; 
+  position: fixed;
+  top: 10px;
+  left: 200px;
+}
+.article6 {
+  background-color: white;
+  width: 20px;
+  height: 750px;
+  position: fixed;
+  top: 10px;
+  left: 500px;
+}
+.article7 {
+  background-color: white;
+  width: 20px;
+  height: 750px;
+  position: fixed;
+  top: 10px;
+  left: 350px;
 }
 
-
-/*LIST STYLES*/
-ul {
-    color:limegreen;
-    font-size: 18px;
-    line-height: 2;
-    list-style-type: square;
+.article {
+  background-color: white;
+  width: 20px;
+  height: 750px;
+  position: fixed;
+  top: 10px;
+  left: 650px;
+}
+.article11 {
+  background-color: white;
+  width: 20px;
+  height: 750px;
+  position: absolute;
+  top: 10px;
+  left: 800px;
 }
 
-
-/*LINK STYLES*/
-a {
-    color:rgb(77, 6, 144);
-    text-decoration: overline; 
-}
-
-/*NEW CSS STYLES.... (z-index)moving the image to a position behind the text.*/
-img {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: -1;
-}
