@@ -1,111 +1,100 @@
 
-main {
-    margin: 200px;
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;     /* Centers vertically */
-    background-color: #f0f0f0;
-}
-/*center*/
-.article {
-  background-color: none;
-  width: 50px;
-  height: 50px;
-  padding: 10px;
-  border-style: solid;
-  border-width: 5px;
-  border-color: red;
-  position: fixed;
-}
-.article8 {
-  background-color: none;
-  width: 70px;
-  height: 70px;
-  padding: 10px;
-  border-style: solid;
-  border-width: 5px;
-  border-color: orange; 
-  position: fixed;
-}
-/*middle RIGHT*/
-.article9 {
-  background-color: none;
-  width: 90px;
-  height: 90px;
-  padding: 10px;
-  border-style: solid;
-  border-width: 5px;
-  border-color: yellow;
-  position: fixed;
-}
-.article10 {
-  background-color: none;
-  width: 110px;
-  height: 110px;
-  padding: 10px;
-  border-style: solid;
-  border-width: 5px; 
-  border-color: green;
-  position: fixed;
-}
-
 /*top*/
-.article2 {
-  background-color: none;
-  width: 130px;
-  height: 130px;
-  padding: 10px;  
-  border-style: solid;
-  border-width: 5px;
-  border-color: blue;
-  position: fixed;
-}
-.article3 {
-  background-color: none;
-  width: 150px;
+.article10 {
+  background-color:rgb(107, 60, 237);
+  width: 800px;
   height: 150px;
-  padding: 10px;
-  border-style: solid;
-  border-width: 5px; 
-  border-color: purple;
   position: fixed;
+  top: 10px;
+  
 }
-/*bottomright*/
+/*secondbox*/
+.article2 {
+  background-color:rgb(253, 61, 23);
+  width: 800px;
+  height: 150px;
+  position: fixed;
+  top: 150px;
+}
+/*third box*/
+.article3 {
+  background-color:rgb(203, 246, 123);
+  width: 800px;
+  height: 150px;
+  position: fixed;
+  top: 300px;
+  
+}
+/*4thbox*/
 .article4 { 
-  background-color: none;
-  width: 170px;
-  height: 170px;
-  padding: 10px;  
-  border: solid 5px indigo;
+  background-color:rgb(206, 0, 161);
+  width: 800px;
+  height: 150px;
   position: fixed;
+  top: 450px;
 }
+/*5thbox*/
 .article5 {
-  background-color: none;
-  width: 190px;
-  height: 190px;
-  padding: 10px;
-  border-style:solid;
-  border-width: 5px;
-  border-color: red;
+  background-color:rgb(123, 172, 246);
+  width: 800px;
+  height: 150px;
   position: fixed;
+  top: 600px;
 }
 
-/*bottom left*/
-.article6 {
-  background-color: none;
-  width: 210px;
-  height: 210px;
-  padding: 10px;
-  border-style: solid;
-  border-width: 5px; 
-  border-color: orange;
+
+
+
+
+/*long verticle stripes*/
+.article8 {
+  background-color: white;
+  width: 20px;
+  height: 750px;
   position: fixed;
+  top: 10px;
+  left: 50px;
+
+}
+.article9 {
+  background-color: white;
+  width: 20px;
+  height: 750px; 
+  position: fixed;
+  top: 10px;
+  left: 200px;
+}
+.article6 {
+  background-color: white;
+  width: 20px;
+  height: 750px;
+  position: fixed;
+  top: 10px;
+  left: 500px;
 }
 .article7 {
-  background-color: none;
-  width: 230px;
-  height: 230px;
-  border: solid 5px yellow;
-  padding: 10px;
+  background-color: white;
+  width: 20px;
+  height: 750px;
   position: fixed;
+  top: 10px;
+  left: 350px;
 }
+
+.article {
+  background-color: white;
+  width: 20px;
+  height: 750px;
+  position: fixed;
+  top: 10px;
+  left: 650px;
+}
+.article11 {
+  background-color: white;
+  width: 20px;
+  height: 750px;
+  position: absolute;
+  top: 10px;
+  left: 800px;
+}
+
