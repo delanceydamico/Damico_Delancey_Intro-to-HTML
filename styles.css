@@ -1,4 +1,21 @@
 
+
+body {
+    background-color: lightseagreen;
+    color: darkblue;
+    font-family: "Times New Roman", serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/*HEADING STYLES*/
+h1 {
+    background-color:darkblue;
+    color: rgb(116, 131, 131); 
+    font-size: 20px; 
+    font-weight: bold;
+    text-transform: capitalize;
 /*top*/
 .article10 {
   background-color:rgb(107, 60, 237);
