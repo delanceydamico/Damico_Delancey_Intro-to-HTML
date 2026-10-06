@@ -1,111 +1,81 @@
+/* General page styling */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
+}
+
+/* Header */
+
+header {
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: lightblue;
+    padding: 15px;
+}
+
+nav a {
+    color: darkblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main content */
 
 main {
-    margin: 200px;
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;     /* Centers vertically */
-    background-color: #f0f0f0;
-}
-/*center*/
-.article {
-  background-color: none;
-  width: 50px;
-  height: 50px;
-  padding: 10px;
-  border-style: solid;
-  border-width: 5px;
-  border-color: red;
-  position: fixed;
-}
-.article8 {
-  background-color: none;
-  width: 70px;
-  height: 70px;
-  padding: 10px;
-  border-style: solid;
-  border-width: 5px;
-  border-color: orange; 
-  position: fixed;
-}
-/*middle RIGHT*/
-.article9 {
-  background-color: none;
-  width: 90px;
-  height: 90px;
-  padding: 10px;
-  border-style: solid;
-  border-width: 5px;
-  border-color: yellow;
-  position: fixed;
-}
-.article10 {
-  background-color: none;
-  width: 110px;
-  height: 110px;
-  padding: 10px;
-  border-style: solid;
-  border-width: 5px; 
-  border-color: green;
-  position: fixed;
+    gap: 30px;
+    padding: 30px;
 }
 
-/*top*/
-.article2 {
-  background-color: none;
-  width: 130px;
-  height: 130px;
-  padding: 10px;  
-  border-style: solid;
-  border-width: 5px;
-  border-color: blue;
-  position: fixed;
-}
-.article3 {
-  background-color: none;
-  width: 150px;
-  height: 150px;
-  padding: 10px;
-  border-style: solid;
-  border-width: 5px; 
-  border-color: purple;
-  position: fixed;
-}
-/*bottomright*/
-.article4 { 
-  background-color: none;
-  width: 170px;
-  height: 170px;
-  padding: 10px;  
-  border: solid 5px indigo;
-  position: fixed;
-}
-.article5 {
-  background-color: none;
-  width: 190px;
-  height: 190px;
-  padding: 10px;
-  border-style:solid;
-  border-width: 5px;
-  border-color: red;
-  position: fixed;
+/* Content boxes */
+
+.content-box {
+    flex: 1;
+    background-color: white;
+    padding: 25px;
+    border: 2px solid darkblue;
 }
 
-/*bottom left*/
-.article6 {
-  background-color: none;
-  width: 210px;
-  height: 210px;
-  padding: 10px;
-  border-style: solid;
-  border-width: 5px; 
-  border-color: orange;
-  position: fixed;
+/* Footer */
+
+footer {
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
-.article7 {
-  background-color: none;
-  width: 230px;
-  height: 230px;
-  border: solid 5px yellow;
-  padding: 10px;
-  position: fixed;
+
+
+/* MOBILE LAYOUT */
+/* 768px and below */
+
+@media screen and (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .content-box {
+        width: auto;
+    }
+
 }
