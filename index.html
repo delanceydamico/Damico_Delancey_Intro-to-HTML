@@ -1,95 +1,29 @@
 
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escape Your Room!</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>Button Click</title>
 </head>
 <body>
 
-    <h1>Welcome to Escape Your Room!</h1>
+    <p id="message">Hello!</p>
 
-    <!-- Welcome popup -->
-   
+    <button id="myButton">Click Me</button>
 
-<div id="welcomePopup" class="popup">
-    <h2 id="message">Read before you start:</h2>
-    <p id="popupText">
-        Look for clues to get out of the room.
-        You have 5 minutes to escape. Have fun!
-    </p>
-    <button id="continueButton" onclick="nextPopup()">Continue</button>
-</div>
+    <script>
+        const message = document.getElementById("message");
+        const button = document.getElementById("myButton");
 
-    <!-- Game room -->
-    <div id="room" style="display: none;">
-     
-        <h2 id="timer">5:00</h2>
+        button.addEventListener("click", function() {
+            if (message.innerText === "") {
+                message.innerText = "Button was clicked!";
+            } else {
+                message.innerText = "";
+            }
 
-        <div class="room">
-
-            <div class="floor"></div>
-
-            <!-- Bed -->
-            <div class="bed">
-                <div id="blanket" onclick="makeBed()"></div>
-                <div id="key" draggable="true" title="Drag the key to the door">🔑</div>
-            </div>
-
-            <!-- Door -->
-            <div id="doorFrame">
-                <div class="door" id="door">
-                    <div class="doorknob"></div>
-                </div>
-            </div>
-
-            <!-- Clothes -->
-            <div id="shirt" class="clothing" onclick="pickUpClothes('shirt')">👕</div>
-            <div id="pants" class="clothing" onclick="pickUpClothes('pants')">👖</div>
-            <div id="socks" class="clothing" onclick="pickUpClothes('socks')">🧦</div>
-
-            <!-- Random objects -->
-            <div class="object" id="book" title="Just an old book">📚</div>
-            <div class="object" id="plant" title="A houseplant">🪴</div>
-            <div class="object" id="ball" title="A toy ball">⚽</div>
-            <div class="object" id="teddy" title="A teddy bear">🧸</div>
-            <div class="object" id="lamp" title="A lamp">💡</div>
-            <div class="object" id="pizza" title="Some leftover food">🍕</div>
-            <div class="object" id="shoe" title="An old shoe">👟</div>
-            <div class="object" id="clock" title="A clock">🕒</div>
-
-            <!-- To-do list -->
-            <div class="note">
-                <h3>To-Do List</h3>
-                <p id="clothesTask">☐ Pick up clothes</p>
-                <p id="bedTask">☐ Make bed</p>
-                <p id="keyTask">Find the key</p>
-            </div>
-
-            <p id="gameMessage"></p>
-        </div>
-    </div>
-
-    <!-- Congratulations screen -->
-    <div id="winScreen" style="display: none;">
-        <h1>🎉 Congratulations! 🎉</h1>
-        <h2>You escaped your room!</h2>
-        <p>You completed both tasks and found the key.</p>
-        <p>You're officially free!</p>
-        <button onclick="location.reload()">Play Again</button>
-    </div>
-
-    <!-- Time-up screen -->
-    <div id="loseScreen" style="display: none;">
-        <h1>⏰ Time's Up!</h1>
-        <h2>You ran out of time.</h2>
-        <p>Try again and see if you can escape!</p>
-        <button onclick="location.reload()">Try Again</button>
-    </div>
+            console.log("Button clicked");
+        });
+    </script>
 
 </body>
 </html>
