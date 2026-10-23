@@ -1,111 +1,347 @@
 
-main {
-    margin: 200px;
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;     /* Centers vertically */
-    background-color: #f0f0f0;
-}
-/*center*/
-.article {
-  background-color: none;
-  width: 50px;
-  height: 50px;
-  padding: 10px;
-  border-style: solid;
-  border-width: 5px;
-  border-color: red;
-  position: fixed;
-}
-.article8 {
-  background-color: none;
-  width: 70px;
-  height: 70px;
-  padding: 10px;
-  border-style: solid;
-  border-width: 5px;
-  border-color: orange; 
-  position: fixed;
-}
-/*middle RIGHT*/
-.article9 {
-  background-color: none;
-  width: 90px;
-  height: 90px;
-  padding: 10px;
-  border-style: solid;
-  border-width: 5px;
-  border-color: yellow;
-  position: fixed;
-}
-.article10 {
-  background-color: none;
-  width: 110px;
-  height: 110px;
-  padding: 10px;
-  border-style: solid;
-  border-width: 5px; 
-  border-color: green;
-  position: fixed;
+body {
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 30px;
+    background-color: #f5eee5;
 }
 
-/*top*/
-.article2 {
-  background-color: none;
-  width: 130px;
-  height: 130px;
-  padding: 10px;  
-  border-style: solid;
-  border-width: 5px;
-  border-color: blue;
-  position: fixed;
-}
-.article3 {
-  background-color: none;
-  width: 150px;
-  height: 150px;
-  padding: 10px;
-  border-style: solid;
-  border-width: 5px; 
-  border-color: purple;
-  position: fixed;
-}
-/*bottomright*/
-.article4 { 
-  background-color: none;
-  width: 170px;
-  height: 170px;
-  padding: 10px;  
-  border: solid 5px indigo;
-  position: fixed;
-}
-.article5 {
-  background-color: none;
-  width: 190px;
-  height: 190px;
-  padding: 10px;
-  border-style:solid;
-  border-width: 5px;
-  border-color: red;
-  position: fixed;
+h1 {
+    font-size: 38px;
+    color: darkred;
 }
 
-/*bottom left*/
-.article6 {
-  background-color: none;
-  width: 210px;
-  height: 210px;
-  padding: 10px;
-  border-style: solid;
-  border-width: 5px; 
-  border-color: orange;
-  position: fixed;
+h2 {
+    font-size: 20px;
 }
-.article7 {
-  background-color: none;
-  width: 230px;
-  height: 230px;
-  border: solid 5px yellow;
-  padding: 10px;
-  position: fixed;
+
+/* Welcome popup */
+.popup {
+    background: white;
+    width: 350px;
+    max-width: 85%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px gray;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Congratulations and time-up screens */
+#winScreen,
+#loseScreen {
+    background: white;
+    width: 320px;
+    max-width: 85%;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px gray;
+}
+button {
+    background: royalblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: navy;
+}
+
+/* Room */
+.room {
+    position: relative;
+    width: 700px;
+    max-width: 95%;
+    height: 500px;
+    margin: 20px auto;
+    border: 5px solid #5c4033;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #f0dfc1;
+}
+
+.floor {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: #c9a477;
+}
+
+/* Bed */
+.bed {
+    position: absolute;
+    bottom: 75px;
+    left: 40px;
+    width: 400px;
+    height: 170px;
+    background: #747474;
+    border: 6px solid #5c4033;
+    box-sizing: border-box;
+    clip-path: polygon(15% 0, 85% 0, 100% 100%, 0 100%);
+}
+
+/* Headboard */
+.bed::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: #8b5e3c;
+}
+
+/* Messy blanket */
+#blanket {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 130px;
+    box-sizing: border-box;
+    background: #8bb8d8;
+    cursor: pointer;
+    z-index: 2;
+
+    clip-path: polygon(
+        0 20%, 20% 0, 35% 18%,
+        55% 5%, 70% 25%, 100% 10%,
+        95% 80%, 75% 100%, 50% 82%,
+        25% 100%, 5% 75%
+    );
+}
+
+/* Made blanket covers the bed */
+#blanket.made {
+    top: 25px;
+    left: 0;
+    width: 100%;
+    height: 139px;
+    clip-path: none;
+    border-radius: 0;
+    background: #8bb8d8;
+    cursor: default;
+}
+
+/* Key */
+#key {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 160px;
+    font-size: 30px;
+    cursor: grab;
+    z-index: 5;
+}
+
+#key.show {
+    display: block;
+}
+
+/* Door frame */
+#doorFrame {
+    position: absolute;
+    bottom: 150px;
+    right: 20px;
+    width: 100px;
+    height: 200px;
+    background: #3c291e;
+    border: 5px solid #5c4033;
+    box-sizing: border-box;
+    perspective: 500px;
+    z-index: 3;
+}
+
+/* Door swings open */
+.door {
+    position: absolute;
+    inset: 0;
+    background: #8b5e3c;
+    border: 2px solid #5c4033;
+    box-sizing: border-box;
+    transform-origin: left center;
+    transition: transform 1s ease;
+}
+
+.door.unlocked {
+    transform: rotateY(-100deg);
+}
+
+.doorknob {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: gold;
+}
+
+/* Clothes */
+.clothing {
+    position: absolute;
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 4;
+}
+
+#shirt {
+    left: 100px;
+    bottom: 25px;
+}
+
+#pants {
+    left: 250px;
+    bottom: 25px;
+}
+
+#socks {
+    left: 600px;
+    bottom: 100px;
+}
+
+/* Random objects */
+.object {
+    position: absolute;
+    font-size: 30px;
+    cursor: default;
+    z-index: 4;
+}
+
+#book { left: 15px; top: 320px; }
+#plant { left: 20px; bottom: 80px; }
+#ball { left: 450px; top: 350px; }
+#teddy { left: 340px; top: 250px; }
+#lamp { left: 600px; top: 400px; }
+#pizza { left: 500px; bottom: 25px; }
+#shoe { left: 550px; bottom: 50px; }
+#clock { left: 250px; top: 100px; }
+
+/* To-do note */
+.note {
+    position: absolute;
+    top: 35px;
+    right: 115px;
+    width: 115px;
+    min-height: 110px;
+    padding: 10px;
+    background: #fff8dc;
+    color: #333;
+    border: 1px solid #d6cba5;
+    box-shadow: 2px 3px 5px #555;
+    transform: rotate(3deg);
+    box-sizing: border-box;
+    z-index: 4;
+}
+
+.note h3 {
+    font-size: 12px;
+    margin: 0 0 8px;
+}
+
+.note p {
+    font-size: 10px;
+    margin: 6px 0;
+}
+
+#gameMessage {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    right: 10px;
+    color: darkgreen;
+    font-weight: bold;
+    z-index: 6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .bed {
+        left: 5px;
+        width: 58%;
+    }
+
+    #blanket {
+        width: 100%;
+    }
+
+    #doorFrame {
+        right: 8px;
+        width: 75px;
+    }
+
+    .note {
+        right: 80px;
+        width: 105px;
+    }
+}
+/* Make the game fit phone screens */
+@media (max-width: 600px) {
+    body {
+        margin: 15px 5px;
+    }
+
+    body > h1 {
+        font-size: 26px;
+    }
+
+    .room {
+        width: 100%;
+        max-width: 100%;
+        height: 450px;
+    }
+
+    .bed {
+        left: 5px;
+        width: 58%;
+        height: 145px;
+    }
+
+    #blanket {
+        width: 100%;
+    }
+
+    #key {
+        left: 40%;
+    }
+
+    #doorFrame {
+        right: 8px;
+        width: 65px;
+        height: 160px;
+        bottom: 150px;
+    }
+
+    .note {
+        right: 75px;
+        width: 100px;
+    }
+
+    .clothing,
+    .object {
+        font-size: 25px;
+    }
+
+    .popup,
+    #winScreen,
+    #loseScreen {
+        width: 90%;
+        padding: 20px;
+    }
+
+    button {
+        padding: 12px 20px;
+    }
 }
